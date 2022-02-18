@@ -7,21 +7,52 @@
     <header class="cabezera">
         <div>
             <a class="cabezera__enlace">
-                <img src="./assets/img/MortalParkourLogo.svg" alt="logo">
+                <img class="enlace__logo" src="./assets/img/MortalParkourLogo.svg" alt="logo"/>
             </a>
-            <nav class="cabezara__navegador">
+            <nav class="cabezera__navegador">
                 <ul class="navegador__lista">
                     <li class="lista__elemento">
                         <a class="elemento__enlace" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="lista__elemento">
+                        <a class="elemento__enlace" href="#mapa">Mapas</a>
+                    </li>
+                    <li class="lista__elemento">
+                        <a class="elemento__enlace" href="#personajes">Personajes</a>
+                    </li>
+                    <li class="lista__elemento">
+                        <a class="elemento__enlace" href="#audio">Audio</a>
+                    </li>
+                    <li class="lista__elemento">
+                        <a class="elemento__enlace" href="#video">Video</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-
+        <article class="mapa" id="mapa">
+            <img src="./assets/img/newYork.png"/>
+            <img src="./assets/img/newYork.png"/>
+            <img src="./assets/img/newYork.png"/>
+        </article>
+        <article class="personajes" id="personajes">
+        </article>
+        <article class="audio" id="audio">
+            <audio class="audio__pista" controls>
+                <source src="./assets/audio/NIVIRO - Memes [NCS Release].mp3" type="audio/mp3">
+                <source src="./assets/audio/NIVIRO-Memes-_NCS-Release_.ogg" type="audio/ogg">
+                    Tu navegador no soporta audio HTML5.
+            </audio>
+            <img class="audio__portada" src="./assets/img/portada_audio.png"/>
+        </article>
+        <article class="video" id="video">
+        </article>
     </main>
     <footer class="pie">
+        <div>
+
+        </div>
     </footer>
 </body>
 </html>
