@@ -6,3 +6,18 @@
 a{
     color:#000000;
 }
+
+.cabezera a{
+    font-size: 1rem;
+}
+
+@media(min-width: 400px){
+    .cabezera a{
+        font-size: 2rem;
+    }
+}
+@media(max-width: 250px){
+    .cabezera a{
+        font-size: 0.75rem;
+    }
+}
