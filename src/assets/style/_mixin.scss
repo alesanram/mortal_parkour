@@ -1,0 +1,19 @@
+@mixin flex($flex,$wrap,$direction,$content,$item,$cont){
+    display: $flex;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $item;
+    align-content: $cont;
+}
+
+@mixin tam($alto,$ancho:0){
+    @if $alto !=0{
+        height: $alto;
+    }
+
+    @if $ancho !=0{
+        width:$ancho;
+    }
+
+}
