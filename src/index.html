@@ -12,13 +12,10 @@
             <nav class="cabezera__navegador">
                 <ul class="navegador__lista">
                     <li class="lista__elemento">
-                        <a class="elemento__enlace" href="#inicio">Inicio</a>
+                        <a class="elemento__enlace" href="#personajes">Personajes</a>
                     </li>
                     <li class="lista__elemento">
                         <a class="elemento__enlace" href="#mapa">Mapas</a>
-                    </li>
-                    <li class="lista__elemento">
-                        <a class="elemento__enlace" href="#personajes">Personajes</a>
                     </li>
                     <li class="lista__elemento">
                         <a class="elemento__enlace" href="#audio">Audio</a>
@@ -31,22 +28,87 @@
         </div>
     </header>
     <main>
-        <article class="mapa" id="mapa">
-            <img src="./assets/img/newYork.png"/>
-            <img src="./assets/img/newYork.png"/>
-            <img src="./assets/img/newYork.png"/>
-        </article>
         <article class="personajes" id="personajes">
+            <article class="personajes__carrusel">
+                <section class="carrusel__section">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
+                        explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
+                    </p>
+                    <img src="./assets/img/newYork.png" alt="logo del videojueo"/>
+                </section>
+                <section class="carrusel__section carrusel__section--central">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
+                        explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
+                    </p>
+                    <img src="./assets/img/newYork.png" alt="personaje del videojuego, persona en bicicleta"/>
+                </section>
+                <section class="carrusel__section">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
+                        explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
+                    </p>
+                    <img src="./assets/img/newYork.png" alt="personaje del videojuego, persona corriendo"/>
+                </section>
+            </article>
+            <ul class="personajes__tablero">
+                <li class="tablero__puntos">
+                    <button></button>
+                </li>
+                <li class="tablero__puntos">
+                    <button></button>
+                </li>
+                <li class="tablero__puntos">
+                    <button></button>
+                </li>
+            </ul>
+        </article>
+        <article class="mapa" id="mapa">
+            <article class="mapa__carrusel">
+                <section class="carrusel__section">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
+                        explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
+                    </p>
+                    <img src="./assets/img/newYork.png"/>
+                </section>
+                <section class="carrusel__section carrusel__section--central">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
+                        explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
+                    </p>
+                    <img src="./assets/img/newYork.png"/>
+                </section>
+                <section class="carrusel__section">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
+                        explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
+                    </p>
+                    <img src="./assets/img/newYork.png"/>
+                </section>
+            </article>
+            <ul class="mapa__tablero">
+                <li class="tablero__puntos">
+                    <button></button>
+                </li>
+                <li class="tablero__puntos">
+                    <button></button>
+                </li>
+                <li class="tablero__puntos">
+                    <button></button>
+                </li>
+            </ul>
         </article>
         <article class="audio" id="audio">
-            <audio class="audio__pista" controls>
+            <img class="audio__portada" src="./assets/img/portada_audio.png" alt="portada cancion Memes de NIVIRO"/>
+            <audio class="audio__pista" controls alt="Memes de NIVIRO en NCS">
                 <source src="./assets/audio/NIVIRO - Memes [NCS Release].mp3" type="audio/mp3">
                 <source src="./assets/audio/NIVIRO-Memes-_NCS-Release_.ogg" type="audio/ogg">
-                    Tu navegador no soporta audio HTML5.
+                    Your Browswer no support audio, link of audio 
+                    <a href="https://www.youtube.com/watch?v=hgXZQfHySDw">Memes-Naviro</a>
             </audio>
-            <img class="audio__portada" src="./assets/img/portada_audio.png"/>
         </article>
         <article class="video" id="video">
+            <video class="video__pista" controls alt="video de ivan samkov en pexels">
+                <source src="./assets/video/pexels-ivan-samkov-6962439.mp4" type="video/mp4" />
+                <source src="./assets/video/pexels-ivan-samkov-6962439.ogg" type="video/ogg" />
+                Su navegador no soporta contenido multimedia.
+            </video>
         </article>
     </main>
     <footer class="pie">
