@@ -1,33 +1,26 @@
 @import "reset";
 @import "variables";
 @import "fuentes";
+@import "mixin";
 
 
 .cabezera{
-    width: 100%;
-    height: 5vh;
+    @include tam(10vh,100%);
     background-color: $mortal_red;
     background-image: url("../img/skyline_header_div.svg");
     background-repeat: repeat-x;
+    
 
     div{
         max-width: 1380px;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        @include tam(100%,100%);
+        @include flex(flex,wrap,row,center,center,center);
         margin: 0 auto;
     }
 
     .cabezera__enlace{
-        width: 20%;
-        height: 100%;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
+        @include tam(100%,20%);
+        @include flex(flex,nowrap,row,center,center,center);
         background-color: $mortal_white;
         background-image: url("../img/skyline_header.svg");
         background-repeat: repeat-x;
@@ -37,26 +30,21 @@
         .enlace__logo{
             max-height:100%;
             min-height:20%;
-            width:60%;
+            @include tam(0,60%);
             object-fit: cover;
         }
     }
 
     .cabezera__navegador{
-        width: 80%;
-        height: 100%;
+        @include tam(100%,80%);
 
         .navegador__lista{
-            width: 100%;
-            height: 100%;
+            @include tam(100%,100%);
             list-style: none;
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-evenly;
-            align-items: center;
-            align-content: center;
+            @include flex(flex,nowrap,row,space-evenly,center,center);
 
             .lista__elemento{
+
                 .elemento__enlace{
                     text-decoration: none;
                     font-family: Blowbrush;
@@ -68,57 +56,240 @@
 main{
     max-width: 1380px;
     min-height: 90vh;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+    @include flex(flex,nowrap,column,space-evenly,center,center);
+    gap: 10vh;
+    margin:5vh 0;
 
-    .mapa{
-        width: 300%;
-        height: 40vh;
+    .personajes{
+        @include tam(60vh,90%);
+        @include flex(flex,nowrap,column,space-evenly,center,center);
+        gap: 5%;
+        margin: auto;
         overflow: hidden;
-        max-width: 80%;
 
-        img{
-            height: 100%;
-            width: 33%;
-            object-fit: contain;
+        .personajes__carrusel{
+            @include tam(85%,300%);
+            @include flex(flex,nowrap,row,space-evenly,center,center);
+
+            .carrusel__section{
+                @include tam(100%,calc(100% / 3 - 2em));
+                position: relative;
+
+                img{
+                    @include tam(100%,100%);
+                    object-fit: cover;
+                }
+
+                p{
+                    position: absolute;
+                    z-index: 10;
+                    left: 50%;
+                }
+            }
+        }
+
+        .personajes__tablero{
+            @include tam(10%,60%);
+            @include flex(flex,nowrap,row,space-between,center,center);
+            list-style: none;
+
+            .tablero__puntos{
+                background-color: blueviolet;
+                @include tam(70%,30%);
+
+                button{
+                    @include tam(100%,100%);
+                    background: none;
+                    border:none;
+                }
+            }
         }
     }
+
+    .mapa{
+        @include tam(60vh,90%);
+        @include flex(flex,nowrap,column,space-evenly,center,center);
+        gap: 5%;
+        margin: auto;
+        overflow: hidden;
+
+        .mapa__carrusel{
+            @include tam(85%,300%);
+            @include flex(flex,nowrap,row,space-evenly,center,center);
+
+            .carrusel__section{
+                @include tam(100%,calc(100% / 3 - 2em));
+
+                img{
+                    @include tam(100%,100%);
+                    object-fit: cover;
+                }
+                p{
+                    display: none;
+                }
+            }
+        }
+
+        .mapa__tablero{
+            @include tam(10%,60%);
+            @include flex(flex,nowrap,row,space-between,center,center);
+            list-style: none;
+
+            .tablero__puntos{
+                background-color: blueviolet;
+                @include tam(70%,30%);
+
+                button{
+                    @include tam(100%,100%);
+                    background: none;
+                    border:none;
+                }
+            }
+        }
+    }
+
     .audio{
-        width:100%;
-        height: 40vh;
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        align-items: center;
+        @include tam(60vh,100%);
+        @include flex(flex,nowrap,column,center,center,center);
+        position: relative;
+
         .audio__portada{
             object-fit: cover;
-            height: 90%;
+            @include tam(100%);
         }
+
         .audio__pista{
-            width: 90%;
-            height: 10%;
+            @include tam(10%,90%);
+            position: absolute;
+            bottom: 25%;
+            z-index: 10;
+        }
+    }
+
+    .video{
+        @include tam(60vh,100%);
+        @include flex(flex,nowrap,column,center,center,center);
+
+        .video__pista{
+            @include tam(100%, 60%)
         }
     }
 }
 
 .pie{
-    width: 100%;
-    height: 5vh;
+    @include tam(10vh,100%);
     background-color: $mortal_red;
     background-image: url("../img/skyline_header_div.svg");
     background-repeat: repeat-x;
 }
-/*@media(min-width: 400px){
+@media(min-width: 400px){
     .cabezera{
         background-size: auto;
-        height: 14vh;
+        @include tam(14vh,0);
     }
     .pie{
         background-size:auto;
-        height: 14vh;
+        @include tam(14vh,0);
     }
-}*/
+}
+@media(min-width: 576px){
+    main{
+        .personajes{
+            @include tam(180vh,100%);
+            display: block;
+
+            .personajes__carrusel{
+                @include tam(100%,80%);
+                margin-left: 10%;
+                @include flex(flex,wrap,row,space-evenly,center,center);
+                gap: 3%;
+
+                .carrusel__section{
+                    @include tam(calc(90% / 3),100%);
+                    @include flex(flex,nowrap,row-reverse,space-evenly,center,center);
+                    position: inherit;
+
+                    img{
+                        @include tam(100%,50%);
+                        object-fit: cover;
+                    }
+
+                    p{
+                        position: inherit;
+                        z-index: 0;
+                        left:0%;
+                        padding-left: 10%;
+                        @include tam(100%,50%)
+                    }
+                }
+                .carrusel__section--central{
+                    @include tam(calc(90% / 3),100%);
+                    @include flex(flex,nowrap,row,space-evenly,center,center);
+                    position: inherit;
+
+                    p{
+                        padding-right: 10%;
+                    }
+                }
+            }
+
+            .personajes__tablero{
+                display: none;
+            }
+        }
+
+        .mapa{
+            @include tam(180vh,100%);
+            display: block;
+
+            .mapa__carrusel{
+                @include tam(100%,80%);
+                margin-left: 10%;
+                @include flex(flex,wrap,row,space-evenly,center,center);
+                gap: 3%;
+
+                .carrusel__section{
+                    @include tam(calc(90% / 3),100%);
+                    @include flex(flex,nowrap,row-reverse,space-evenly,center,center);
+                    position: inherit;
+
+                    img{
+                        @include tam(100%,50%);
+                        object-fit: cover;
+                    }
+
+                    p{
+                        position: inherit;
+                        z-index: 0;
+                        left:0%;
+                        padding-left: 10%;
+                        @include tam(100%,50%)
+                    }
+                }
+                .carrusel__section--central{
+                    @include tam(calc(90% / 3),100%);
+                    @include flex(flex,nowrap,row,space-evenly,center,center);
+                    position: inherit;
+
+                    p{
+                        padding-right: 10%;
+                    }
+                }
+            }
+
+            .mapa__tablero{
+                display: none;
+            }
+        }
+    }
+}
+
+@media(max-width: 250px){
+    .cabezera{
+        background-size: cover;
+    }
+    .pie{
+        background-size: cover;
+    }
+}
+
