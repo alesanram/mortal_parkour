@@ -6,8 +6,8 @@
 <body>
     <header class="cabezera">
         <div>
-            <a class="cabezera__enlace">
-                <img class="enlace__logo" src="./assets/img/MortalParkourLogo.svg" alt="logo"/>
+            <a class="cabezera__enlace" tabindex="0" role="banner" aria-label="Inicio">
+                <img class="enlace__logo" src="./assets/img/MortalParkourLogo.svg" alt="Mortal Parkour"/>
             </a>
             <nav class="cabezera__navegador">
                 <ul class="navegador__lista">
@@ -29,25 +29,43 @@
     </header>
     <main>
         <article class="personajes" id="personajes">
+            <h2>PERSONAJES</h2>
             <article class="personajes__carrusel">
-                <section class="carrusel__section">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
-                        explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
-                    </p>
-                    <img src="./assets/img/newYork.png" alt="logo del videojueo"/>
-                </section>
-                <section class="carrusel__section carrusel__section--central">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
-                        explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
-                    </p>
-                    <img src="./assets/img/newYork.png" alt="personaje del videojuego, persona en bicicleta"/>
-                </section>
-                <section class="carrusel__section">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
-                        explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
-                    </p>
-                    <img src="./assets/img/newYork.png" alt="personaje del videojuego, persona corriendo"/>
-                </section>
+                <article class="carrusel__section">
+                    <section class="section__imagen">
+                        <img src="./assets/img/newYork.png" alt="personaje del videojuego, persona en bicicleta"/>
+                    </section>
+                    <section class="section__texto">
+                        <h3>BILLY</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
+                            explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
+                        </p>
+                    </section>
+                    <button class="section__boton">X</button>
+                </article>
+                <article class="carrusel__section carrusel__section--central">
+                    <section class="section__imagen">
+                        <img src="./assets/img/newYork.png" alt="personaje del videojuego, persona en bicicleta"/>
+                    </section>
+                    <section class="section__texto">
+                        <h3>BILLY</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
+                            explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
+                        </p>
+                    </section>
+                    <button class="section__boton">X</button>
+                </article>
+                <article class="carrusel__section">
+                    <section class="section__imagen">
+                        <img src="./assets/img/newYork.png" alt="personaje del videojuego, persona en bicicleta"/>
+                    </section>
+                    <section class="section__texto">
+                        <h3>BILLY</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
+                            explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
+                        </p>
+                    </section>
+                </article>
             </article>
             <ul class="personajes__tablero">
                 <li class="tablero__puntos">
@@ -61,26 +79,43 @@
                 </li>
             </ul>
         </article>
+
         <article class="mapa" id="mapa">
+            <h2>MAPAS</h2>
             <article class="mapa__carrusel">
-                <section class="carrusel__section">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
-                        explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
-                    </p>
-                    <img src="./assets/img/newYork.png"/>
-                </section>
-                <section class="carrusel__section carrusel__section--central">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
-                        explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
-                    </p>
-                    <img src="./assets/img/newYork.png"/>
-                </section>
-                <section class="carrusel__section">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
-                        explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
-                    </p>
-                    <img src="./assets/img/newYork.png"/>
-                </section>
+                <article class="carrusel__section">
+                    <section class="section__imagen">
+                        <img src="./assets/img/newYork.png" alt="personaje del videojuego, persona en bicicleta"/>
+                    </section>
+                    <section class="section__texto">
+                        <h3>BILLY</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
+                            explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
+                        </p>
+                    </section>
+                </article>
+                <article class="carrusel__section carrusel__section--central">
+                    <section class="section__imagen">
+                        <img src="./assets/img/newYork.png" alt="personaje del videojuego, persona en bicicleta"/>
+                    </section>
+                    <section class="section__texto">
+                        <h3>BILLY</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
+                            explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
+                        </p>
+                    </section>
+                </article>
+                <article class="carrusel__section">
+                    <section class="section__imagen">
+                        <img src="./assets/img/newYork.png" alt="personaje del videojuego, persona en bicicleta"/>
+                    </section>
+                    <section class="section__texto">
+                        <h3>BILLY</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam excepturi quibusdam voluptatem modi impedit, 
+                            explicabo officia blanditiis, esse consectetur voluptatibus magnam. Quibusdam, at eum dolores ut laborum rerum quisquam. Quidem.
+                        </p>
+                    </section>
+                </article>
             </article>
             <ul class="mapa__tablero">
                 <li class="tablero__puntos">
@@ -94,7 +129,9 @@
                 </li>
             </ul>
         </article>
+
         <article class="audio" id="audio">
+            <h2>AUDIO</h2>
             <img class="audio__portada" src="./assets/img/portada_audio.png" alt="portada cancion Memes de NIVIRO"/>
             <audio class="audio__pista" controls alt="Memes de NIVIRO en NCS">
                 <source src="./assets/audio/NIVIRO - Memes [NCS Release].mp3" type="audio/mp3">
@@ -104,6 +141,7 @@
             </audio>
         </article>
         <article class="video" id="video">
+            <h2>VIDEO</h2>
             <video class="video__pista" controls alt="video de ivan samkov en pexels">
                 <source src="./assets/video/pexels-ivan-samkov-6962439.mp4" type="video/mp4" />
                 <source src="./assets/video/pexels-ivan-samkov-6962439.ogg" type="video/ogg" />
@@ -116,6 +154,7 @@
 
         </div>
     </footer>
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>
 
