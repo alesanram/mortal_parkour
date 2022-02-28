@@ -49,11 +49,12 @@
         left: 0;
         background-color: $mortal_white;
         p{
-            z-index: 10;
             left: 50%;
         }
     }
 }
+
+
 /*Mixin para incluir un carrusel*/
 @mixin carrusel($carrusel,$tablero,$num){
     #{$carrusel}{

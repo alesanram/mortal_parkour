@@ -9,6 +9,9 @@
     background-color: $mortal_red;
     background-image: url("../img/skyline_header_div.svg");
     background-repeat: repeat-x;
+    position: sticky;
+    top: 0;
+    z-index: 50;
     
 
     div{
@@ -64,7 +67,7 @@ main{
         @include flex(flex,nowrap,column,space-evenly,center,center);
         @include carrusel(".personajes__carrusel",".personajes__tablero",3);
         gap: 5%;
-        margin: auto;
+        margin-left: 5%;
         overflow: hidden;
     }
 
@@ -73,32 +76,19 @@ main{
         @include flex(flex,nowrap,column,space-evenly,center,center);
         @include carrusel(".mapa__carrusel",".mapa__tablero",3);
         gap: 5%;
-        margin: auto;
+        margin-left: 5%;
         overflow: hidden;
     }
 
     .audio{
         @include tam(60vh,100%);
-        @include flex(flex,nowrap,column,center,center,center);
-        position: relative;
-
-        .audio__portada{
-            @include tam(100%);
-            object-fit: cover;
-        }
-
-        .audio__pista{
-            @include tam(10%,90%);
-            position: absolute;
-            bottom: 25%;
-            z-index: 10;
-        }
+        @include flex(flex,nowrap,column,space-evenly,center,center);
     }
 
     .video{
         @include tam(60vh,100%);
-        @include flex(flex,nowrap,column,center,center,center);
-        gap: 5%;
+        @include flex(flex,nowrap,column,space-evenly,center,center);
+        gap: 5vh;
 
         h2{
             @include tam(5%,0)
@@ -130,17 +120,13 @@ main{
 @media(min-width: 576px){
     main{
         .personajes{
-            @include tam(180vh,100%);
-            @include lista_imagenes(".personajes__carrusel",".personajes__tablero",3);
-            display: block;
+            @include tam(90vh,90%);
 
             
         }
 
         .mapa{
-            @include tam(180vh,100%);
-            @include lista_imagenes(".mapa__carrusel",".mapa__tablero",3);
-            display: block;
+            @include tam(90vh,90%);
 
         }
     }
