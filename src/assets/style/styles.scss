@@ -105,6 +105,30 @@ main{
     background-color: $mortal_red;
     background-image: url("../img/skyline_header_div.svg");
     background-repeat: repeat-x;
+    
+    div{
+        @include tam(100%,100%);
+        @include flex(flex,wrap,row,center,center,center);
+        max-width: 1380px;
+        margin: 0 auto;
+    }
+
+    .pie__navegador{
+        @include tam(100%,100%);
+
+        .pie__lista{
+            @include tam(100%,100%);
+            @include flex(flex,nowrap,row,space-evenly,center,center);
+            list-style: none;
+
+            .lista__elemento{
+
+                .elemento__enlace{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }
 
 @media(min-width: 420px){
@@ -117,7 +141,7 @@ main{
         background-size: auto;
     }
 }
-@media(min-width: 576px){
+@media(min-width: 600px){
     main{
         .personajes{
             @include tam(90vh,90%);
@@ -127,6 +151,21 @@ main{
 
         .mapa{
             @include tam(90vh,90%);
+
+        }
+    }
+}
+
+@media(min-width: 700px){
+    main{
+        .personajes{
+            @include tam(80vh,90%);
+
+            
+        }
+
+        .mapa{
+            @include tam(80vh,90%);
 
         }
     }

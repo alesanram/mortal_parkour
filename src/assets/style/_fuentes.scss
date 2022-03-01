@@ -26,16 +26,26 @@ h3{
 }
 .cabezera a{
     font-size: 1.5rem;
-    font-family: Blowbrush;
+    font-family: Blowbrush,'Poppins', sans-serif;
+}
+.pie a{
+    font-size: 1.25rem;
+    font-family: Blowbrush,'Poppins', sans-serif;
 }
 
 @media(min-width: 420px){
     .cabezera a{
         font-size: 2rem;
     }
+    .pie a{
+        font-size: 1.75rem;
+    }
 }
 @media(max-width: 300px){
     .cabezera a{
         font-size: 1rem;
+    }
+    .pie a{
+        font-size: 0.75rem;
     }
 }
