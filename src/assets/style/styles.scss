@@ -67,7 +67,7 @@ main{
         @include flex(flex,nowrap,column,space-evenly,center,center);
         @include carrusel(".personajes__carrusel",".personajes__tablero",3);
         gap: 5%;
-        margin-left: 5%;
+        margin:auto;
         overflow: hidden;
     }
 
@@ -76,7 +76,7 @@ main{
         @include flex(flex,nowrap,column,space-evenly,center,center);
         @include carrusel(".mapa__carrusel",".mapa__tablero",3);
         gap: 5%;
-        margin-left: 5%;
+        margin:auto;
         overflow: hidden;
     }
 

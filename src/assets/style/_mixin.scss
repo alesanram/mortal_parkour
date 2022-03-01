@@ -41,7 +41,7 @@
         left: 0;
         img{
             @include tam(100%,100%);
-            object-fit: cover;
+            object-fit: contain;
             background-color: $mortal_white;
         }
     }
@@ -50,7 +50,7 @@
     }
     .section__texto{
         @include tam(100%,100%);
-        @include flex(flex,nowrap,column,center,center,center);
+        overflow-y: scroll;
         position: absolute;
         top:0;
         left: 0;

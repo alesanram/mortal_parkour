@@ -1,8 +1,8 @@
 const texto=document.getElementsByClassName("section__texto");
 const imagen=document.getElementsByClassName("section__imagen");
 const boton=document.getElementsByClassName("section__boton");
+
 //Js para funcion Tab
-debugger
 for(let i=0;i<boton.length;i++) {
     boton[i].addEventListener('click',()=>{
         if(imagen[i].classList.contains('active')){
@@ -13,7 +13,7 @@ for(let i=0;i<boton.length;i++) {
         }
     })
 };
-debugger
+
 const punto=document.getElementsByClassName("tablero__puntos");
 const personajes=document.getElementsByClassName("personajes__carrusel");
 const mapa=document.getElementsByClassName("mapa__carrusel");
