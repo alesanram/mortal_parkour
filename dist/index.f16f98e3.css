@@ -1,0 +1,401 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 12px;
+}
+body {
+  background-color: #303036;
+}
+@font-face {
+  font-family: Blowbrush;
+  src: url("blowbrush.4e6c2c0f.otf"), url("blowbrush.b49c5ddd.ttf");
+}
+a {
+  color: #000000;
+}
+p {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+h2, h3 {
+  color: #EDDDDD;
+  font-family: Blowbrush, "Poppins", sans-serif;
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2.75rem;
+}
+.section__texto h3, p {
+  color: #000000;
+}
+.cabezera a {
+  font-size: 1.5rem;
+  font-family: Blowbrush;
+}
+@media (min-width: 420px) {
+  .cabezera a {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 300px) {
+  .cabezera a {
+    font-size: 1rem;
+  }
+}
+/*Mixin para incluir flex */
+/*Mixin para incluir tamano*/
+/*Mixin tab*/
+/*Mixin para incluir un carrusel*/
+.cabezera {
+  height: 10vh;
+  width: 100%;
+  background-color: #FF0000;
+  background-image: url("skyline_header_div.da00e38e.svg");
+  background-repeat: repeat-x;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.cabezera div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+.cabezera .cabezera__enlace {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #EDDDDD;
+  background-image: url("skyline_header.aea94c38.svg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  overflow: hidden;
+}
+.cabezera .cabezera__enlace .enlace__logo {
+  width: 60%;
+  max-height: 100%;
+  min-height: 20%;
+  object-fit: cover;
+}
+.cabezera .cabezera__navegador {
+  height: 100%;
+  width: 80%;
+}
+.cabezera .cabezera__navegador .navegador__lista {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+}
+.cabezera .cabezera__navegador .navegador__lista .lista__elemento .elemento__enlace {
+  text-decoration: none;
+}
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  max-width: 1380px;
+  min-height: 90vh;
+  gap: 10vh;
+  margin: 5vh 0;
+}
+main .personajes {
+  height: 60vh;
+  width: 90%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  gap: 5%;
+  margin-left: 5%;
+  overflow: hidden;
+}
+main .personajes .personajes__carrusel {
+  height: 85%;
+  width: 300%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  transform: translateX(33.3333333333%);
+}
+main .personajes .personajes__carrusel .carrusel__section {
+  height: 100%;
+  width: calc(33.3333333333% - 0.5em);
+  position: relative;
+}
+main .personajes .personajes__carrusel .carrusel__section .section__boton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  background: none;
+  border: none;
+  padding: 3vh;
+  color: #FF0000;
+  font-size: 3rem;
+}
+main .personajes .personajes__carrusel .carrusel__section .section__imagen {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .personajes .personajes__carrusel .carrusel__section .section__imagen img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-color: #EDDDDD;
+}
+main .personajes .personajes__carrusel .carrusel__section .active {
+  z-index: 10;
+}
+main .personajes .personajes__carrusel .carrusel__section .section__texto {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #EDDDDD;
+  padding: 0 20%;
+}
+main .personajes .personajes__carrusel .carrusel__section .section__texto p {
+  left: 50%;
+}
+main .personajes .case1 {
+  transform: translateX(33.3333333333%);
+}
+main .personajes .case2 {
+  transform: translateX(0);
+}
+main .personajes .case3 {
+  transform: translateX(-33.3333333333%);
+}
+main .personajes .personajes__tablero {
+  height: 10%;
+  width: 60%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+}
+main .personajes .personajes__tablero .tablero__puntos {
+  background-color: #FF0000;
+  height: 70%;
+  width: 30%;
+}
+main .personajes .personajes__tablero .tablero__puntos button {
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+}
+main .mapa {
+  height: 60vh;
+  width: 90%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  gap: 5%;
+  margin-left: 5%;
+  overflow: hidden;
+}
+main .mapa .mapa__carrusel {
+  height: 85%;
+  width: 300%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  transform: translateX(33.3333333333%);
+}
+main .mapa .mapa__carrusel .carrusel__section {
+  height: 100%;
+  width: calc(33.3333333333% - 0.5em);
+  position: relative;
+}
+main .mapa .mapa__carrusel .carrusel__section .section__boton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  background: none;
+  border: none;
+  padding: 3vh;
+  color: #FF0000;
+  font-size: 3rem;
+}
+main .mapa .mapa__carrusel .carrusel__section .section__imagen {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .mapa .mapa__carrusel .carrusel__section .section__imagen img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-color: #EDDDDD;
+}
+main .mapa .mapa__carrusel .carrusel__section .active {
+  z-index: 10;
+}
+main .mapa .mapa__carrusel .carrusel__section .section__texto {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #EDDDDD;
+  padding: 0 20%;
+}
+main .mapa .mapa__carrusel .carrusel__section .section__texto p {
+  left: 50%;
+}
+main .mapa .case1 {
+  transform: translateX(33.3333333333%);
+}
+main .mapa .case2 {
+  transform: translateX(0);
+}
+main .mapa .case3 {
+  transform: translateX(-33.3333333333%);
+}
+main .mapa .mapa__tablero {
+  height: 10%;
+  width: 60%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+}
+main .mapa .mapa__tablero .tablero__puntos {
+  background-color: #FF0000;
+  height: 70%;
+  width: 30%;
+}
+main .mapa .mapa__tablero .tablero__puntos button {
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+}
+main .audio {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+main .video {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  gap: 5vh;
+}
+main .video h2 {
+  height: 5%;
+}
+main .video .video__pista {
+  height: 90%;
+  width: 60%;
+}
+.pie {
+  height: 10vh;
+  width: 100%;
+  background-color: #FF0000;
+  background-image: url("skyline_header_div.da00e38e.svg");
+  background-repeat: repeat-x;
+}
+@media (min-width: 420px) {
+  .cabezera {
+    height: 14vh;
+    background-size: auto;
+  }
+
+  .pie {
+    height: 14vh;
+    background-size: auto;
+  }
+}
+@media (min-width: 576px) {
+  main .personajes {
+    height: 90vh;
+    width: 90%;
+  }
+  main .mapa {
+    height: 90vh;
+    width: 90%;
+  }
+}
+@media (max-width: 300px) {
+  .cabezera {
+    background-size: cover;
+  }
+
+  .pie {
+    background-size: cover;
+  }
+}
+/*# sourceMappingURL=index.f16f98e3.css.map */

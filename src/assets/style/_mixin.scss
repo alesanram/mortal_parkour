@@ -28,6 +28,11 @@
         top:0;
         right: 0;
         z-index: 20;
+        background: none;
+        border: none;
+        padding: 3vh;
+        color: $mortal_red;
+        font-size: 3rem;
     }
     .section__imagen{
         @include tam(100%,100%);
@@ -37,6 +42,7 @@
         img{
             @include tam(100%,100%);
             object-fit: cover;
+            background-color: $mortal_white;
         }
     }
     .active{
@@ -44,10 +50,12 @@
     }
     .section__texto{
         @include tam(100%,100%);
+        @include flex(flex,nowrap,column,center,center,center);
         position: absolute;
         top:0;
         left: 0;
         background-color: $mortal_white;
+        padding: 0 20%;
         p{
             left: 50%;
         }
@@ -60,11 +68,21 @@
     #{$carrusel}{
         @include tam(85%,300%);
         @include flex(flex,nowrap,row,space-evenly,center,center);
+        transform: translateX(calc(100% / $num));
 
         .carrusel__section{
-            @include tam(100%,calc(100% / $num - 2em));
+            @include tam(100%,calc(100% / $num - 0.5em));
             @include tab;
         }
+    }
+    .case1{
+        transform: translateX(calc(100% / $num));
+    }
+    .case2{
+        transform: translateX(0);
+    }
+    .case3{
+        transform: translateX(calc(-100% / $num));
     }
 
     #{$tablero}{
@@ -73,7 +91,7 @@
         list-style: none;
 
         .tablero__puntos{
-            background-color: blueviolet;
+            background-color: $mortal_red;
             @include tam(70%,30%);
 
             button{
@@ -82,47 +100,5 @@
                 border:none;
             }
         }
-    }
-}
-
-@mixin lista_imagenes($carrusel,$tablero,$num){
-    #{$carrusel}{
-        @include tam(100%,80%);
-        margin-left: 10%;
-        @include flex(flex,wrap,row,space-evenly,center,center);
-        gap: 3%;
-
-        .carrusel__section{
-            @include tam(calc(90% / $num),100%);
-            @include flex(flex,nowrap,row-reverse,space-evenly,center,center);
-            position: inherit;
-
-            img{
-                @include tam(100%,50%);
-                object-fit: cover;
-            }
-
-            p{
-                position: inherit;
-                z-index: 0;
-                left:0%;
-                padding-left: 10%;
-                @include tam(100%,50%)
-            }
-        }
-
-        .carrusel__section--central{
-            @include tam(calc(90% / 3),100%);
-            @include flex(flex,nowrap,row,space-evenly,center,center);
-            position: inherit;
-
-            p{
-                padding-right: 10%;
-            }
-        }
-    }
-
-    #{$tablero}{
-        display: none;
     }
 }

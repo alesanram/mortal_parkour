@@ -1,4 +1,5 @@
 @import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @font-face {
     font-family: Blowbrush;
     src: url('../fuentes/blowbrush/blowbrush.otf')
@@ -7,9 +8,13 @@
 a{
     color:$mortal_black;
 }
+p{
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
 h2,h3{
     color:$mortal_white;
-    font-family: Blowbrush;
+    font-family: Blowbrush,'Poppins', sans-serif;
     font-size: 3rem;
 }
 h3{
