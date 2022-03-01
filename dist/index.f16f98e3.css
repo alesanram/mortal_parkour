@@ -133,7 +133,7 @@ main .personajes {
   align-items: center;
   align-content: center;
   gap: 5%;
-  margin-left: 5%;
+  margin: auto;
   overflow: hidden;
 }
 main .personajes .personajes__carrusel {
@@ -173,7 +173,7 @@ main .personajes .personajes__carrusel .carrusel__section .section__imagen {
 main .personajes .personajes__carrusel .carrusel__section .section__imagen img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   background-color: #EDDDDD;
 }
 main .personajes .personajes__carrusel .carrusel__section .active {
@@ -182,12 +182,7 @@ main .personajes .personajes__carrusel .carrusel__section .active {
 main .personajes .personajes__carrusel .carrusel__section .section__texto {
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  overflow-y: scroll;
   position: absolute;
   top: 0;
   left: 0;
@@ -238,7 +233,7 @@ main .mapa {
   align-items: center;
   align-content: center;
   gap: 5%;
-  margin-left: 5%;
+  margin: auto;
   overflow: hidden;
 }
 main .mapa .mapa__carrusel {
@@ -278,7 +273,7 @@ main .mapa .mapa__carrusel .carrusel__section .section__imagen {
 main .mapa .mapa__carrusel .carrusel__section .section__imagen img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   background-color: #EDDDDD;
 }
 main .mapa .mapa__carrusel .carrusel__section .active {
@@ -287,12 +282,7 @@ main .mapa .mapa__carrusel .carrusel__section .active {
 main .mapa .mapa__carrusel .carrusel__section .section__texto {
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  overflow-y: scroll;
   position: absolute;
   top: 0;
   left: 0;
